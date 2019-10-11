@@ -33,11 +33,28 @@
     flex-wrap: wrap;
     width: 100%;
 
+    .sky{
+      @media @phone {
+        display: none;
+      }
+    }
+
+    .launch{
+      @media @phone {
+        display: none;
+      }
+    }
+
     img {
       width: 28%;
       margin: 20px 2.5%;
       border-radius: 20px;
       height: 100%;
+
+        @media @phone {
+          width: 100%;
+        }
+
     }
   }
 
@@ -51,28 +68,11 @@
     p {
       margin-top: 13px;
     }
+
+    @media @phone {
+      margin-bottom: -4rem;
+    }
   }
-
-
-    // <section class="walk">
-    //   <div class="walk-text">
-    //     <h3>Let's Go For A Walk</h3>
-
-    //     <p>The Earth was small, light blue, and so touchingly alone, our home that must be defended like a holy relic. The Earth was absolutely round.</p>
-      
-    //     <p>Suddenly struck me that that tiny pea, pretty and blue, was the Earth. I put up my thumb and shut one eye, and my thumb blotted out the planet Earth.</p>
-      
-    //     <div class="btn">
-    //       Sign Up
-    //     </div>
-    //   </div>
-      
-    //   <div class="walk-img">
-    //       <img src="img/space-walk.png" alt="Space walking astronaut">
-    //   </div>
-
-    // </section>
-
 
   .walk {
     margin-top: 60px;
@@ -85,13 +85,15 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: unset;
+      padding: unset;
     }
 
     .walk-text {
       width: 50%;
 
       @media @phone {
-        width: unset;
+        width: 100%;
+        margin: 20px 2.5%;
       }
 
       h3 {
@@ -119,7 +121,7 @@
 
           @media @phone {
             .p-button(center, @button-color, 1.8rem, 2rem 0);
-            margin-bottom: -2.5rem;
+            margin-bottom: unset;
           }
 
         }
@@ -143,6 +145,8 @@
         align-self: center;
         margin-left: unset;
         margin-bottom: 1rem;
+        margin: 20px 2.5%;
+        
       }
 
       img {

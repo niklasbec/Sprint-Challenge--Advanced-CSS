@@ -1,1 +1,22 @@
 // Mixins Here
+
+.flexbox(@display, @justify, @align-i, @dir) {
+    display: @display;
+    justify-content: @justify;
+    align-items: @align-i;
+    flex-direction: @dir;
+}
+
+.p-button(@t-align, @color, @font-s, @padd) {
+    text-align: @t-align;
+    color: @color;
+    font-size: @font-s;
+    padding: @padd;
+}
+
+.animation(@name, @delay, @duration, @iteration) {
+    animation-name: @name;
+    animation-delay: @delay;
+    animation-duration: @duration;
+    animation-iteration-count: @iteration;
+}

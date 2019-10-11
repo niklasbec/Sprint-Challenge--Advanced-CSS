@@ -3,6 +3,11 @@
 .home {
 
   .intro {
+    
+    @media @phone {
+      display: flex;
+      flex-direction: column;
+    }
 
     h2 {
       padding: 15px;
@@ -14,6 +19,11 @@
 
     img {
       border-radius: @border-radius;
+
+      @media @phone {
+        width: 95%;
+        align-self: center;
+      }
     }
   
   }
@@ -43,43 +53,6 @@
     }
   }
 
-  .walk {
-    margin-top: 60px;
-    border-top: 1px solid @main-border-color;
-    padding: 50px 60px;
-    display: flex;
-    justify-content: center;
-
-    .walk-text {
-      width: 50%;
-
-      h3 {
-        margin-bottom: 10px;
-      }
-
-      p {
-        margin-bottom: 26px;
-      }
-
-      .btn {
-        background-color: @button-bcolor;
-        width: 10rem;
-        border-radius: @border-radius;
-        a{
-          text-decoration: none;
-        }
-        p {
-          .p-button(center, @button-color, 1.8rem, 0.4rem 0);
-        }
-
-        :hover {
-          background-color: @button-color;
-          p {
-            color: @button-bcolor;
-          }
-        }
-      }
-    }
 
     // <section class="walk">
     //   <div class="walk-text">
@@ -100,10 +73,78 @@
 
     // </section>
 
+
+  .walk {
+    margin-top: 60px;
+    border-top: 1px solid @main-border-color;
+    padding: 50px 60px;
+    display: flex;
+    justify-content: center;
+    
+    @media @phone {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: unset;
+    }
+
+    .walk-text {
+      width: 50%;
+
+      @media @phone {
+        width: unset;
+      }
+
+      h3 {
+        margin-bottom: 10px;
+      }
+
+      p {
+        margin-bottom: 26px;
+      }
+
+      .btn {
+        background-color: @button-bcolor;
+        width: 10rem;
+        border-radius: @border-radius;
+
+        @media @phone {
+          width: 100%;
+        }
+
+        a{
+          text-decoration: none;
+        }
+        p {
+          .p-button(center, @button-color, 1.8rem, 0.4rem 0);
+
+          @media @phone {
+            .p-button(center, @button-color, 1.8rem, 2rem 0);
+            margin-bottom: -2.5rem;
+          }
+
+        }
+
+        :hover {
+          background-color: @button-color;
+          p {
+            color: @button-bcolor;
+          }
+        }
+      }
+    }
+
     .walk-img {
       width: 46%;
       margin-left: 4%;
       
+      @media @phone {
+        order: -1;
+        width: 100%;
+        align-self: center;
+        margin-left: unset;
+        margin-bottom: 1rem;
+      }
+
       img {
         width: 100%;
         height: auto;

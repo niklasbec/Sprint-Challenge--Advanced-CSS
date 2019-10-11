@@ -11,6 +11,10 @@
     p {
       padding:0 15px;
     }
+
+    img {
+      border-radius: @border-radius;
+    }
   
   }
 
@@ -58,8 +62,43 @@
       }
 
       .btn {
+        background-color: @button-bcolor;
+        width: 10rem;
+        border-radius: @border-radius;
+        a{
+          text-decoration: none;
+        }
+        p {
+          .p-button(center, @button-color, 1.8rem, 0.4rem 0);
+        }
+
+        :hover {
+          background-color: @button-color;
+          p {
+            color: @button-bcolor;
+          }
+        }
       }
     }
+
+    // <section class="walk">
+    //   <div class="walk-text">
+    //     <h3>Let's Go For A Walk</h3>
+
+    //     <p>The Earth was small, light blue, and so touchingly alone, our home that must be defended like a holy relic. The Earth was absolutely round.</p>
+      
+    //     <p>Suddenly struck me that that tiny pea, pretty and blue, was the Earth. I put up my thumb and shut one eye, and my thumb blotted out the planet Earth.</p>
+      
+    //     <div class="btn">
+    //       Sign Up
+    //     </div>
+    //   </div>
+      
+    //   <div class="walk-img">
+    //       <img src="img/space-walk.png" alt="Space walking astronaut">
+    //   </div>
+
+    // </section>
 
     .walk-img {
       width: 46%;
